@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>How to install NodeJs | Siyu Qian</title>
+  <title>Magento 1.X custom grid pagenation | Siyu Qian</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Download source NodeJs package from https://nodejs.org/ cd $DOWNLOAD_DIRECTORY 1sudo tar -xf $&amp;#123;NODE_PACKAGE_NAME&amp;#125; --directory /usr/local --strip-components 1">
+  <meta name="description" content="app/code/local/Varien/Data/Collection/Db.php12345678if(count($this-&amp;gt;getSelect()-&amp;gt;getPart(Zend_Db_Select::GROUP)) &amp;gt; 0) &amp;#123;	$countSelect-&amp;gt;reset(Zend_Db_Select::GROUP);	$countSelect-&amp;gt;di">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to install NodeJs">
-<meta property="og:url" content="https://siyuqian.github.io/2017/11/29/How-to-install-NodeJs/index.html">
+<meta property="og:title" content="Magento 1.X custom grid pagenation">
+<meta property="og:url" content="https://siyuqian.github.io/2017/12/14/Note-Magento-1.X-custom-grid-pagenation/index.html">
 <meta property="og:site_name" content="Siyu Qian">
-<meta property="og:description" content="Download source NodeJs package from https://nodejs.org/ cd $DOWNLOAD_DIRECTORY 1sudo tar -xf $&amp;#123;NODE_PACKAGE_NAME&amp;#125; --directory /usr/local --strip-components 1">
-<meta property="og:updated_time" content="2017-11-30T08:18:53.537Z">
+<meta property="og:description" content="app/code/local/Varien/Data/Collection/Db.php12345678if(count($this-&amp;gt;getSelect()-&amp;gt;getPart(Zend_Db_Select::GROUP)) &amp;gt; 0) &amp;#123;	$countSelect-&amp;gt;reset(Zend_Db_Select::GROUP);	$countSelect-&amp;gt;di">
+<meta property="og:updated_time" content="2017-12-14T10:39:24.202Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to install NodeJs">
-<meta name="twitter:description" content="Download source NodeJs package from https://nodejs.org/ cd $DOWNLOAD_DIRECTORY 1sudo tar -xf $&amp;#123;NODE_PACKAGE_NAME&amp;#125; --directory /usr/local --strip-components 1">
+<meta name="twitter:title" content="Magento 1.X custom grid pagenation">
+<meta name="twitter:description" content="app/code/local/Varien/Data/Collection/Db.php12345678if(count($this-&amp;gt;getSelect()-&amp;gt;getPart(Zend_Db_Select::GROUP)) &amp;gt; 0) &amp;#123;	$countSelect-&amp;gt;reset(Zend_Db_Select::GROUP);	$countSelect-&amp;gt;di">
   
     <link rel="alternate" href="/atom.xml" title="Siyu Qian" type="application/atom+xml">
   
@@ -67,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="wiki-How-to-install-NodeJs" class="article article-type-wiki" itemscope itemprop="blogPost">
+        <section id="main"><article id="note-Note-Magento-1.X-custom-grid-pagenation" class="article article-type-note" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/29/How-to-install-NodeJs/" class="article-date">
-  <time datetime="2017-11-29T07:42:44.000Z" itemprop="datePublished">2017-11-29</time>
+    <a href="/2017/12/14/Note-Magento-1.X-custom-grid-pagenation/" class="article-date">
+  <time datetime="2017-12-14T10:36:45.000Z" itemprop="datePublished">2017-12-14</time>
 </a>
     
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      How to install NodeJs
+      Magento 1.X custom grid pagenation
     </h1>
   
 
@@ -89,16 +89,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li>Download source NodeJs package from <a href="https://nodejs.org/" target="_blank" rel="noopener">https://nodejs.org/</a></li>
-<li>cd $DOWNLOAD_DIRECTORY</li>
-<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -xf <span class="variable">$&#123;NODE_PACKAGE_NAME&#125;</span> --directory /usr/<span class="built_in">local</span> --strip-components 1</span><br></pre></td></tr></table></figure></li>
-</ol>
+        <p>app/code/local/Varien/Data/Collection/Db.php<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(count(<span class="keyword">$this</span>-&gt;getSelect()-&gt;getPart(Zend_Db_Select::GROUP)) &gt; <span class="number">0</span>) &#123;</span><br><span class="line">	$countSelect-&gt;reset(Zend_Db_Select::GROUP);</span><br><span class="line">	$countSelect-&gt;distinct(<span class="keyword">true</span>);</span><br><span class="line">	$group = <span class="keyword">$this</span>-&gt;getSelect()-&gt;getPart(Zend_Db_Select::GROUP);</span><br><span class="line">	$countSelect-&gt;columns(<span class="string">"COUNT(DISTINCT "</span>.implode(<span class="string">", "</span>, $group).<span class="string">")"</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	$countSelect-&gt;columns(<span class="string">'COUNT(*)'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://siyuqian.github.io/2017/11/29/How-to-install-NodeJs/" data-id="cjb6cxk9v0002ihfq7ao1op3v" class="article-share-link">Partager</a>
+      <a data-url="https://siyuqian.github.io/2017/12/14/Note-Magento-1.X-custom-grid-pagenation/" data-id="cjb6cxka20006ihfqpbnaaajb" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -107,15 +103,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/11/30/How-to-setup-XDEBUG-with-PHP7-0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/12/14/How-to-setup-use-Virtualenv/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
-          How to setup XDEBUG with PHP7.0+
+          How to setup &amp; use Virtualenv
         
       </div>
     </a>
   
+  
+    <a href="/2017/12/05/How-to-install-Magento-2-via-command-line/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">How to install Magento 2 via command line</div>
+    </a>
   
 </nav>
 

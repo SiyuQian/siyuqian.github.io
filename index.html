@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://siyuqian.github.io"></form>
@@ -64,6 +64,80 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="wiki-How-to-setup-use-Virtualenv" class="article article-type-wiki" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/14/How-to-setup-use-Virtualenv/" class="article-date">
+  <time datetime="2017-12-14T10:41:28.000Z" itemprop="datePublished">2017-12-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/14/How-to-setup-use-Virtualenv/">How to setup &amp; use Virtualenv</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>virtualenv to seperates developement environment:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">virtualenv <span class="variable">$&#123;NAME&#125;</span></span><br><span class="line"><span class="built_in">source</span> <span class="variable">$&#123;NAME&#125;</span>/bin/activate</span><br><span class="line"></span><br><span class="line">deactivate</span><br><span class="line"></span><br><span class="line">pip freeze --<span class="built_in">local</span></span><br><span class="line"></span><br><span class="line">virtualenv -p /usr/bin/python3</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://siyuqian.github.io/2017/12/14/How-to-setup-use-Virtualenv/" data-id="cjb6cxk9z0004ihfqxf1d8qgp" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="note-Note-Magento-1.X-custom-grid-pagenation" class="article article-type-note" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/14/Note-Magento-1.X-custom-grid-pagenation/" class="article-date">
+  <time datetime="2017-12-14T10:36:45.000Z" itemprop="datePublished">2017-12-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/14/Note-Magento-1.X-custom-grid-pagenation/">Magento 1.X custom grid pagenation</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>app/code/local/Varien/Data/Collection/Db.php<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(count(<span class="keyword">$this</span>-&gt;getSelect()-&gt;getPart(Zend_Db_Select::GROUP)) &gt; <span class="number">0</span>) &#123;</span><br><span class="line">	$countSelect-&gt;reset(Zend_Db_Select::GROUP);</span><br><span class="line">	$countSelect-&gt;distinct(<span class="keyword">true</span>);</span><br><span class="line">	$group = <span class="keyword">$this</span>-&gt;getSelect()-&gt;getPart(Zend_Db_Select::GROUP);</span><br><span class="line">	$countSelect-&gt;columns(<span class="string">"COUNT(DISTINCT "</span>.implode(<span class="string">", "</span>, $group).<span class="string">")"</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	$countSelect-&gt;columns(<span class="string">'COUNT(*)'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://siyuqian.github.io/2017/12/14/Note-Magento-1.X-custom-grid-pagenation/" data-id="cjb6cxka20006ihfqpbnaaajb" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="magento-How-to-install-Magento-2-via-command-line" class="article article-type-magento" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -91,7 +165,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://siyuqian.github.io/2017/12/05/How-to-install-Magento-2-via-command-line/" data-id="cjathzlcw0003txfqroga09z1" class="article-share-link">Share</a>
+      <a data-url="https://siyuqian.github.io/2017/12/05/How-to-install-Magento-2-via-command-line/" data-id="cjb6cxk9t0001ihfqigozee9k" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -127,7 +201,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://siyuqian.github.io/2017/11/30/How-to-change-folder-and-files-permission-recursively/" data-id="cjathzlcm0000txfqyaoxt46p" class="article-share-link">Share</a>
+      <a data-url="https://siyuqian.github.io/2017/11/30/How-to-change-folder-and-files-permission-recursively/" data-id="cjb6cxk9n0000ihfq48mx6729" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -164,7 +238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://siyuqian.github.io/2017/11/30/Note-Gulp-Sass-bug/" data-id="cjathzlcv0002txfqkwgncty9" class="article-share-link">Share</a>
+      <a data-url="https://siyuqian.github.io/2017/11/30/Note-Gulp-Sass-bug/" data-id="cjb6cxka00005ihfq72qxfsm2" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -211,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://siyuqian.github.io/2017/11/30/How-to-setup-XDEBUG-with-PHP7-0/" data-id="cjathzlcs0001txfqny1u0tad" class="article-share-link">Share</a>
+      <a data-url="https://siyuqian.github.io/2017/11/30/How-to-setup-XDEBUG-with-PHP7-0/" data-id="cjb6cxk9x0003ihfqk8hn327j" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -252,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://siyuqian.github.io/2017/11/29/How-to-install-NodeJs/" data-id="cjathzlcy0004txfq4syvp75k" class="article-share-link">Share</a>
+      <a data-url="https://siyuqian.github.io/2017/11/29/How-to-install-NodeJs/" data-id="cjb6cxk9v0002ihfq7ao1op3v" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -287,9 +361,17 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/12/14/How-to-setup-use-Virtualenv/">How to setup &amp; use Virtualenv</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/14/Note-Magento-1.X-custom-grid-pagenation/">Magento 1.X custom grid pagenation</a>
+          </li>
         
           <li>
             <a href="/2017/12/05/How-to-install-Magento-2-via-command-line/">How to install Magento 2 via command line</a>
@@ -301,14 +383,6 @@
         
           <li>
             <a href="/2017/11/30/Note-Gulp-Sass-bug/">Note: Gulp-Sass bug</a>
-          </li>
-        
-          <li>
-            <a href="/2017/11/30/How-to-setup-XDEBUG-with-PHP7-0/">How to setup XDEBUG with PHP7.0+</a>
-          </li>
-        
-          <li>
-            <a href="/2017/11/29/How-to-install-NodeJs/">How to install NodeJs</a>
           </li>
         
       </ul>
@@ -324,7 +398,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Siyu Qian<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
